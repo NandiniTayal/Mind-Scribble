@@ -1,4 +1,4 @@
 db.sqlite3
-__pycache__/
 .py[cod]
+__pycache__/
 .DS_Store
