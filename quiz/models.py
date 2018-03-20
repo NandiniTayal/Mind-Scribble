@@ -6,8 +6,18 @@ class Question(models.Model):
 	answer_id = models.IntegerField()
 	quiz= models.ForeignKey('Quiz',on_delete=models.CASCADE,)
 
+	def __str__(self):
+		txt = self.question_text
+		if len(txt) > 50:
+			return txt[:50] + '...' 
+		else:
+			return txt
+
 class Quiz(models.Model):
 	title =models.CharField(max_length = 50)
 	desc=models.CharField(max_length=200)
 
-# Create your models here.
+	def __str__(self):
+		return self.title
+
+

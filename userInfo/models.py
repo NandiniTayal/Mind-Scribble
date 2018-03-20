@@ -6,4 +6,5 @@ class UserInfo(models.Model):
 	user=models.OneToOneField(User,on_delete=models.CASCADE)
 	quiz = models.ManyToManyField(Quiz)
 
-# Create your models here.
+	def __str__(self):
+		return self.user.username
