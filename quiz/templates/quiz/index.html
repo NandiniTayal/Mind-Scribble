@@ -1,0 +1,7 @@
+{% if quiz_list %}
+<ul>
+{% for quiz in quiz_list %}
+<li>{{quiz.title}}</li>
+{% endfor %}
+</ul>
+{% endif %}
